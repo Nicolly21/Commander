@@ -32,7 +32,11 @@ namespace Commander.Controllers
         {
             var commandItem = _repository.GetCommandById(id);
 
-            return Ok(commandItem);
+            if(commandItem != null){
+                return Ok(commandItem);     //200 status code
+            }
+            return NotFound();  //404 status code
+
         }
     }
 }
