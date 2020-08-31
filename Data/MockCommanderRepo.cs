@@ -6,7 +6,7 @@ namespace Commander.Data
     //Classe que implementa a interface (SIMULADOR)
     public class MockCommanderRepo : ICommanderRepo
     {
-        public IEnumerable<Command> GetAppCommands()
+        public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>
             {
