@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Commander.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,9 @@ namespace Commander
 
             //services.AddScoped<ICommanderRepo, MockCommanderRepo>(); - Swap for SqlCommanderRepo
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+
+            //Serviço de mapeamento entre Domain Model e DTO
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
