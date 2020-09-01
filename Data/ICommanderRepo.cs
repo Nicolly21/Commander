@@ -5,7 +5,7 @@ namespace Commander.Data
 {
     public interface ICommanderRepo
     {
-        IEnumerable<Command> GetAllCommands();  //lista de commands
+        IEnumerable<Command> GetAllCommands();  //lista do DB Internal
         Command GetCommandById(int id);
     } 
 }
