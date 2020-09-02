@@ -5,7 +5,11 @@ namespace Commander.Data
 {
     public interface ICommanderRepo
     {
+        bool SaveChanges();
         IEnumerable<Command> GetAllCommands();  //lista do DB Internal
         Command GetCommandById(int id);
+
+        //CREATE
+        void CreateCommand(Command cmd);
     } 
 }
