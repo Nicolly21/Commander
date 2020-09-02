@@ -1,12 +1,17 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Commander.Dtos
 {
     public class CommandCreateDto
     {
-        //Ainda falta as constrains, porém Jackson irá mostrar primeiro sem, depois ira colocar novamente
+        [Required] 
+        [MaxLength(100)] 
         public string HowTo { get; set; }
 
+        [Required]
         public string Line { get; set; }
 
+        [Required]
         public string Platform { get; set; }
 
     }

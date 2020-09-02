@@ -46,5 +46,18 @@ namespace Commander.Controllers
             return NotFound();  //404 status code
 
         }
+
+        //POST api/commands
+        [HttpPost]
+        public ActionResult <CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+        {
+            var commandModel = _mapper.Map<Command>(commandCreateDto);  //CommandCreateDTO -> Domain Model
+            _repository.CreateCommand(commandModel);
+            _repository.SaveChanges();  
+
+            //Deve retorna um CommandReadDto
+            var commandReadDto = _mapper.Map<CommandReadDto>(commandModel);     //Domain Model -> CommandReadDto
+            return Ok(commandReadDto); 
+        }
     }
 }
