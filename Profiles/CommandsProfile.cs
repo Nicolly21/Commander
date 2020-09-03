@@ -13,6 +13,8 @@ namespace Commander.Profiles
 
             //Mapeamento entre DTO e Domain Model
             CreateMap<CommandCreateDto, Command>();
+
+            CreateMap<CommandUpdateDto, Command>();
         }
     }
 }

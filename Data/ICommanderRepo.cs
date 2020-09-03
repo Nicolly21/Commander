@@ -11,5 +11,8 @@ namespace Commander.Data
 
         //CREATE
         void CreateCommand(Command cmd);
+
+        //UPDATE
+        void UpdateCommand(Command cmd);
     } 
 }
