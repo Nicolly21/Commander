@@ -8,11 +8,10 @@ namespace Commander.Data
         bool SaveChanges();
         IEnumerable<Command> GetAllCommands();  //lista do DB Internal
         Command GetCommandById(int id);
-
-        //CREATE
         void CreateCommand(Command cmd);
-
-        //UPDATE
         void UpdateCommand(Command cmd);
+
+        void DeleteCommand(Command cmd);
+
     } 
 }
