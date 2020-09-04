@@ -8,13 +8,15 @@ namespace Commander.Profiles
     {
         public CommandsProfile()
         {
-            //Mapeamento entre Domain Model e DTO
+            //Map Domain Model -> DTO
             CreateMap<Command, CommandReadDto>();
 
-            //Mapeamento entre DTO e Domain Model
+            //Map DTO -> Domain Model
             CreateMap<CommandCreateDto, Command>();
-
+            
             CreateMap<CommandUpdateDto, Command>();
+
+            CreateMap<Command, CommandUpdateDto>();
         }
     }
 }
